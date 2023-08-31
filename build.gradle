@@ -1,0 +1,48 @@
+plugins {
+	id 'application'
+	id 'java'
+	id 'org.springframework.boot' version '2.7.15'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(11)
+	}
+}
+
+application {
+	// Define the main class for the application.
+	mainClass = 'com.assessment.customer.CustomerApplication'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'com.h2database:h2:2.2.220'
+
+
+	implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
+
+	// Use JUnit Jupiter for testing.
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	testImplementation 'org.mockito:mockito-junit-jupiter:5.5.0'
+	testImplementation 'org.mockito:mockito-core'
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform() {}
+	testLogging {
+		events("passed", "skipped", "failed", "STANDARD_ERROR")
+	}
+}

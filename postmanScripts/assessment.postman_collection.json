@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "b6cce23d-ed05-4342-88e4-5f650a06001e",
+		"name": "assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5325459"
+	},
+	"item": [
+		{
+			"name": "customerCreate",
+			"item": [
+				{
+					"name": "createCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"First Name\": \"Modisane\",\n  \"Last Name\": \"Mashego\",\n  \"Mobile Number\": \"0123456789\",\n  \"ID Number\": \"9010175546087\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer?processorType=SIMPLE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							],
+							"query": [
+								{
+									"key": "processorType",
+									"value": "SIMPLE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCustomer_Null_FirstName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Last Name\": \"Mashego\",\n  \"Mobile Number\": \"0123456789\",\n  \"ID Number\": \"9010175546087\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCustomer_Null_LastName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"First Name\": \"Modisane\",\n  \"Mobile Number\": \"0123456789\",\n  \"ID Number\": \"9010175546087\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCustomer_Null_Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"First Name\": \"Modisane\",\n  \"Last Name\": \"Mashego\",\n  \"Mobile Number\": \"0123456789\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCustomer_advanced_Invalid_Exception",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"First Name\": \"Modisane\",\n  \"Last Name\": \"Mashego\",\n  \"Mobile Number\": \"0123456789\",\n  \"ID Number\": \"1234567890123\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer?processorType=ADVANCED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							],
+							"query": [
+								{
+									"key": "processorType",
+									"value": "ADVANCED"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCustomer_simple_Invalid_Exception Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"First Name\": \"Modisane\",\n  \"Last Name\": \"Mashego\",\n  \"Mobile Number\": \"0123456789\",\n  \"ID Number\": \"901017554608\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer?processorType=ADVANCED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							],
+							"query": [
+								{
+									"key": "processorType",
+									"value": "ADVANCED"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customerUpdate",
+			"item": [
+				{
+					"name": "updateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"First Name\": \"Modisane\",\n  \"Last Name\": \"Mashego\",\n  \"Mobile Number\": \"0123456789\",\n  \"ID Number\": \"9010175546087\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/5?processorType=SIMPLE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"5"
+							],
+							"query": [
+								{
+									"key": "processorType",
+									"value": "SIMPLE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer_null_id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"First Name\": \"Modisane\",\n  \"Last Name\": \"Mashego\",\n  \"Mobile Number\": \"0123456789\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/5?processorType=SIMPLE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"5"
+							],
+							"query": [
+								{
+									"key": "processorType",
+									"value": "SIMPLE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer_simple_invalid_id_exception",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"First Name\": \"Modisane\",\n  \"Last Name\": \"Mashego\",\n  \"Mobile Number\": \"0123456789\",\n  \"ID Number\": \"901017554608\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/5?processorType=SIMPLE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"5"
+							],
+							"query": [
+								{
+									"key": "processorType",
+									"value": "SIMPLE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer_advanced_invalid_id_exception",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"First Name\": \"Modisane\",\n  \"Last Name\": \"Mashego\",\n  \"Mobile Number\": \"1123456789\",\n  \"ID Number\": \"1234567890123\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/5?processorType=ADVANCED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"5"
+							],
+							"query": [
+								{
+									"key": "processorType",
+									"value": "ADVANCED"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer_null_firstName",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Last Name\": \"Mashego\",\n  \"Mobile Number\": \"0123456789\",\n  \"ID Number\": \"9010175546087\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/5?processorType=SIMPLE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"5"
+							],
+							"query": [
+								{
+									"key": "processorType",
+									"value": "SIMPLE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer_null_lastName",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"First Name\": \"Modisane\",\n  \"Mobile Number\": \"0123456789\",\n  \"ID Number\": \"9010175546087\",\n  \"Physical Address\": \"234 Test lane, Alberton, Gauteng, South Africa, 1447\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/5?processorType=SIMPLE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"5"
+							],
+							"query": [
+								{
+									"key": "processorType",
+									"value": "SIMPLE"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customerSearch",
+			"item": [
+				{
+					"name": "customerSearchKeyword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer?keyword=Je",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "Je"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customerSearchNoKeyword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
