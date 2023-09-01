@@ -35,7 +35,7 @@ public class CustomerController {
     }
 
     @Operation(summary = "Search for customer",
-            description = "Search for customer using keyword, if no keyword is passed return all")
+            description = "Search for customer using keyword to search first name/last name/id Number, if no keyword is passed return all")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved")
     })
